@@ -28,4 +28,6 @@ public:
     {
         ROOT = NULL; // initializing ROOT to NULL
     }
+
+    void Insert(string element) // Insert a Node in binary search tree
 }
