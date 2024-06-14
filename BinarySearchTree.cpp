@@ -47,5 +47,8 @@ public:
         }
 
         if (element < parent->info) // if value in the data field of the newnode is lees than that of the parent
+        {
+            parent->leftchild = newNode; // make the left child of the parent point to the newNode
+        }
     }
 }
