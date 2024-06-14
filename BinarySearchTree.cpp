@@ -54,6 +54,58 @@ public:
         else if (element > parent->info) // id the value in the data fiels of the newnode is greater than that of the parent
         {
             parent->rightchild = newNode; // make the right child of the parent point to the newnode
+
         }
     }
+
+    void search(string element, Node*& parent, Node*& currentNode)
+    {
+        // this function searches the currentNode pf the specified Node as well as the current node of its parent
+        currentNode = ROOT;
+        parent = NULL;
+        while ((currentNode != NULL)&& (currentNode->info != element))
+        {
+            parent = currentNode;
+            if (element < currentNode->info)
+                currentNode = currentNode->leftchild;
+            else
+                currentNode == currentNode->rightchild;
+
+        }
+    }
+
+    void inorder(Node* ptr)
+    {
+        if (ROOT == NULL)
+        {
+            cout << "Tree is empty" << endl;
+            return;
+        }
+        if (ptr != NULL)
+        {
+            inorder(ptr->leftchild);
+            cout << ptr->info << "";
+            inorder(ptr->rightchild);
+        }
+
+    }
+
+    void preorder(Node* ptr)
+    {
+        if (ROOT == NULL)
+        {
+            cout << "Tree is empty" << endl;
+            return;
+
+        }
+        if (ptr != NULL)
+        {
+            cout << ptr->info << "";
+            preorder(ptr->leftchild);
+            preorder(ptr->rightchild);
+        }
+    }
+
+
+    
 }
