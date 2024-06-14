@@ -29,5 +29,8 @@ public:
         ROOT = NULL; // initializing ROOT to NULL
     }
 
-    void Insert(string element) // Insert a Node in binary search tree
+    void Insert(string element) // Insert a Node in binary search
+    {
+        Node* newNode = new Node(element, NULL, NULL); //Allocate memory for the new Node
+    }
 }
