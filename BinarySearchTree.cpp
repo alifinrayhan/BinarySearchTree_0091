@@ -52,5 +52,8 @@ public:
 
         }
         else if (element > parent->info) // id the value in the data fiels of the newnode is greater than that of the parent
+        {
+            parent->rightchild = newNode; // make the right child of the parent point to the newnode
+        }
     }
 }
